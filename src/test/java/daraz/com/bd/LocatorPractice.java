@@ -145,6 +145,26 @@ public class LocatorPractice extends DriverSetup {
         //sellOnDaraz.click();
 
         //------------Follow Us Section---------
+        //Locate Facebook Icon
+        WebElement facebookIcon = driver.findElement(By.xpath("//*[contains(@href,'facebook.com/DarazBangladesh')]"));
+        //facebookIcon.click();
+
+        //Locate Daraz Blog Icon
+        WebElement darazBlogIcon = driver.findElement(By.xpath("//*[contains(@href,'blog.daraz.com.bd')]"));
+        //darazBlogIcon.click();
+
+        //Locate Daraz Youtube Channel Icon
+        WebElement youtubeChannelIcon = driver.findElement(By.xpath("//*[contains(@href,'www.youtube.com/c/DarazBangladeshOfficial')]"));
+        //youtubeChannelIcon.click();
+
+        //Locate Daraz Twitter Page Icon
+        WebElement darazTwitterPageIcon = driver.findElement(By.xpath("//*[contains(@href,'twitter.com/DarazBangladesh')]"));
+        //darazTwitterPageIcon.click();
+
+
+        //Locate Instagram Page Icon
+        WebElement darazInstagramPageIcon = driver.findElement(By.xpath("//*[contains(@href,'instagram.com/darazbangladesh')]"));
+        darazInstagramPageIcon.click();
 
         Thread.sleep(1000);
     }
