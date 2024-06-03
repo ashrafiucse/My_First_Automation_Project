@@ -92,6 +92,60 @@ public class LocatorPractice extends DriverSetup {
         // ---->> Problemmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 
-        Thread.sleep(2000);
+        //-----------------Categories------------
+//        WebElement categoryProduct = driver.findElement(By.cssSelector("//a[@algo_scm='undefined']"));
+//        System.out.println(categoryProduct.getText());
+
+        //-----------------Just For You----------------
+
+        //Locate Load More Button
+        WebElement loadMoreButton = driver.findElement(By.className("J_LoadMoreButton"));
+        //System.out.println(loadMoreButton.getText());
+        //Not Showing Text
+
+        //-------------Customer Care Section------------------
+        //Locate Help Center Link Text
+        WebElement helpCenter = driver.findElement(By.linkText("Help Center"));
+        //helpCenter.click();
+
+
+        //-----Daraz Column------
+        //Locate About Daraz Text
+        WebElement aboutDaraz = driver.findElement(By.linkText("About Daraz"));
+        //aboutDaraz.click();
+
+        //Locate Digital Payments Link Text
+        WebElement digitalPayments = driver.findElement(By.linkText("Digital Payments"));
+        //digitalPayments.click();
+
+        //----------Country---------------
+        //Locate Pakistan Link Text
+        WebElement countryPakistan = driver.findElement(By.linkText("Pakistan"));
+        //System.out.println(countryPakistan.getTagName());
+        //countryPakistan.click();
+
+        WebElement countrySriLanka = driver.findElement(By.linkText("Sri Lanka"));
+        //System.out.println(countryPakistan.getTagName());
+        //countrySriLanka.click();
+
+        //---------------App Link Section---------------
+        //Locate ios App Link
+        //WebElement iosAppLink = driver.findElement(By.cssSelector("a[class='drz-footer-sprit drz-footer-sprit-link icon-yatra-img-appstore']"));
+        //System.out.println(iosAppLink.getText());
+        //iosAppLink.click();
+
+        //---------Earn With Daraz-----------
+        //Locate Daraz University Link Text
+        WebElement darazUniversity = driver.findElement(By.partialLinkText("Daraz University"));
+        //darazUniversity.click();
+        //System.out.println(darazUniversity.getText());
+
+        //Locate Sell On Daraz Link Text
+        WebElement sellOnDaraz = driver.findElement(By.linkText("Sell on Daraz"));
+        //sellOnDaraz.click();
+
+        //------------Follow Us Section---------
+
+        Thread.sleep(1000);
     }
 }
