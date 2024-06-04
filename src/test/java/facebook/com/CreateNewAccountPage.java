@@ -30,11 +30,40 @@ public class CreateNewAccountPage extends DriverSetup {
         WebElement passwordField = driver.findElement(By.name("reg_passwd__"));
         passwordField.sendKeys("abc123");
 
+        //Locate Age Field
+        //WebElement ageField = driver.findElement(By.name("birthday_age"));
+        //ageField.sendKeys("26");
+
         //------------Gender Section------------
         //Locate Female Radio Button
-        //WebElement femaleRadioButton = driver.findElement(By.xpath("//label[text(),'Female']"));
+        WebElement femaleRadioButton = driver.findElement(By.xpath("//input[@value='1']"));
+        //System.out.println(femaleRadioButton.getTagName());
         //femaleRadioButton.click();
 
-        Thread.sleep(2000);
+        //Locate Male Radio Button
+        WebElement maleRadioButton = driver.findElement(By.xpath("//input[@value='2']"));
+        //System.out.println(maleRadioButton.getTagName());
+        maleRadioButton.click();
+
+        //Locate Custom Radio Button
+        WebElement customRadioButton = driver.findElement(By.xpath("//input[@value='-1']"));
+        //System.out.println(customRadioButton.getTagName());
+        //customRadioButton.click();
+
+        //---------------Some Links Before Sign Up Button---------
+        //Locate Learn more Link Text
+        WebElement learnMore = driver.findElement(By.linkText("Learn more"));
+        //learnMore.click();
+
+        //------Sign Up Button-------------
+        //Locate Sign up Button
+        WebElement signUpButton = driver.findElement(By.name("websubmit"));
+        //signUpButton.click();
+
+        //Locate Already have an account? Link
+        WebElement alreadyHaveAnAccLink = driver.findElement(By.linkText("Already have an account?"));
+        //alreadyHaveAnAccLink.click();
+
+        Thread.sleep(5000);
     }
 }
