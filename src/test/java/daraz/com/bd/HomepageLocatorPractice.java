@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class LocatorPractice extends DriverSetup {
+public class HomepageLocatorPractice extends DriverSetup {
     @Test
     public void testLocatorsInHomePage() throws InterruptedException {
         driver.get("https://www.daraz.com.bd/");
