@@ -64,10 +64,9 @@ public class LocatorPractice extends DriverSetup {
 //        sliderButton.click();
 
         //Locate Slider Image
-//        WebElement sliderImage = driver.findElement(By.cssSelector("img[class='main-img']"));
-//        System.out.println(sliderImage.getText());
-        //Problemmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-
+        //WebElement sliderImage = driver.findElement(By.xpath("//a[@href='//pages.daraz.com.bd/wow/gcp/daraz/megascenario/bd/bd-6-6-eid-ul-adha-2024-campaign/hot-deals-all?spm=a2a0e.home.top.dbr3.49c312f7EgNDIt&pfilter=1010Badge_1177897&scm=1003.4.icms-zebra-100031732-2885620.OTHER_6502997622_7768800']"));
+        //sliderImage.click();
+        //System.out.println(sliderImage.getTagName());
 
         //Locate Promotional Banner
         WebElement promotionalBanner = driver.findElement(By.className("countdown-content"));
@@ -87,9 +86,8 @@ public class LocatorPractice extends DriverSetup {
         //System.out.println(shopMoreButton.getText());
 
         //Locate Flash Sell Element
-//        WebElement flashSellProduct = driver.findElement(By.className("card-fs-content-body-unit"));
+//        WebElement flashSellProduct = driver.findElement(By.xpath("//*[contains(@href,'www.daraz.com.bd/products/bioaqua-60g-hz20-i323089497')]"));
 //        System.out.println(flashSellProduct.getText());
-        // ---->> Problemmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 
         //-----------------Categories------------
@@ -99,8 +97,9 @@ public class LocatorPractice extends DriverSetup {
         //-----------------Just For You----------------
 
         //Locate Load More Button
-        WebElement loadMoreButton = driver.findElement(By.className("J_LoadMoreButton"));
-        //System.out.println(loadMoreButton.getText());
+        //WebElement loadMoreButton = driver.findElement(By.linkText("Load More"));
+        //loadMoreButton.click();
+        //System.out.println(loadMoreButton.getTagName());
         //Not Showing Text
 
         //-------------Customer Care Section------------------
@@ -130,11 +129,19 @@ public class LocatorPractice extends DriverSetup {
 
         //---------------App Link Section---------------
         //Locate ios App Link
-        WebElement iosAppLink = driver.findElement(By.xpath("//*[contains(@href,'itunes.apple.com/app')]"));
-        System.out.println(iosAppLink.getText());
+        WebElement iosAppLink = driver.findElement(By.xpath("//*[contains(@href,'itunes.apple.com/app/id978058048?mt=8&scm=1003.4.icms-zebra-100022982-2874591.OTHER_5436817469_2538051')]"));
+        //System.out.println(iosAppLink.getTagName());
         //iosAppLink.click();
 
+        //Locate Android Play Store Link
+        WebElement playStoreLink = driver.findElement(By.className("icon-yatra-img-google-play"));
+        //playStoreLink.click();
+        //System.out.println(playStoreLink.getText());
 
+        //Locate Android Play Store Link
+        WebElement huaweiAppStoreLink = driver.findElement(By.xpath("//*[contains(@href,'appgallery.huawei.com')]"));
+        //huaweiAppStoreLink.click();
+        //System.out.println(huaweiAppStoreLink.getTagName());
 
         //---------Earn With Daraz-----------
         //Locate Daraz University Link Text
@@ -171,7 +178,7 @@ public class LocatorPractice extends DriverSetup {
 
         //------------------Top Categories & Brands--------------------------
         //Locate Mobile Phones Link
-        WebElement mobilePhonesLinkText = driver.findElement(By.linkText("Mobile Phones"));
+        //WebElement mobilePhonesLinkText = driver.findElement(By.linkText("Mobile Phones"));
         //mobilePhonesLinkText.click();
 
 
