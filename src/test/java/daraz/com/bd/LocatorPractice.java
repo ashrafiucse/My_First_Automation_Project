@@ -130,9 +130,11 @@ public class LocatorPractice extends DriverSetup {
 
         //---------------App Link Section---------------
         //Locate ios App Link
-        //WebElement iosAppLink = driver.findElement(By.cssSelector("a[class='drz-footer-sprit drz-footer-sprit-link icon-yatra-img-appstore']"));
-        //System.out.println(iosAppLink.getText());
+        WebElement iosAppLink = driver.findElement(By.xpath("//*[contains(@href,'itunes.apple.com/app')]"));
+        System.out.println(iosAppLink.getText());
         //iosAppLink.click();
+
+
 
         //---------Earn With Daraz-----------
         //Locate Daraz University Link Text
@@ -164,7 +166,14 @@ public class LocatorPractice extends DriverSetup {
 
         //Locate Instagram Page Icon
         WebElement darazInstagramPageIcon = driver.findElement(By.xpath("//*[contains(@href,'instagram.com/darazbangladesh')]"));
-        darazInstagramPageIcon.click();
+        //darazInstagramPageIcon.click();
+
+
+        //------------------Top Categories & Brands--------------------------
+        //Locate Mobile Phones Link
+        WebElement mobilePhonesLinkText = driver.findElement(By.linkText("Mobile Phones"));
+        //mobilePhonesLinkText.click();
+
 
         Thread.sleep(1000);
     }
