@@ -11,8 +11,8 @@ public class ForgottenAccountPage extends DriverSetup {
         driver.get("https://web.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0");
 
         //Locate Email or Phone to Log in
-        //WebElement emailorPhoneLogin = driver.findElement(By.xpath("//*[@type='email' or @placeholder='Email or phone']"));
-        //emailorPhoneLogin.sendKeys("abc");
+        //WebElement emailOrPhoneLogin = driver.findElement(By.id("login_form"));
+        //emailOrPhoneLogin.sendKeys("abc");
 
         //Locate Password Field
         //WebElement passwordFieldLogin = driver.findElement(By.xpath("//*[contains(@placeholder,'Password')]"));
@@ -38,6 +38,6 @@ public class ForgottenAccountPage extends DriverSetup {
         //Locate Search Button
         //WebElement searchButton = driver.findElement(By.name("did_submit"));
         //searchButton.click();
-        Thread.sleep(5000);
+        Thread.sleep(10000);
     }
 }

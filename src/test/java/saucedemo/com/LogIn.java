@@ -13,14 +13,53 @@ public class LogIn extends DriverSetup {
         userNameBox.sendKeys("standard_user");
         WebElement passwordBox = driver.findElement(By.id("password"));
         passwordBox.sendKeys("secret_sauce");
+        //Locate Log in Button
         WebElement logInButton = driver.findElement(By.name("login-button"));
         logInButton.click();
         Thread.sleep(2000);
-    }
-    public void addToCart() throws InterruptedException {
-        driver.get("https://www.saucedemo.com/inventory.html");
+        //Locate Bike Light Product
+        //driver.findElement(By.id("item_0_title_link")).click();
+
+        //Locate Add to Cart Button
+        //driver.findElement(By.name("add-to-cart")).click();
+
+        //Locate Cart Icon
+        driver.findElement(By.className("shopping_cart_link")).click();
+
+        //Locate Bike light Price
+        //String lightPrice = driver.findElement(By.className("inventory_item_price")).getText();
+        //System.out.println(lightPrice);
+
+        //Locate CheckOut Button and click it
+        driver.findElement(By.name("checkout")).click();
+
+        //Locate Delivery Address Text
+        WebElement firstName = driver.findElement(By.id("first-name"));
+        firstName.sendKeys("Ashraf");
+
+        WebElement lastName = driver.findElement(By.id("last-name"));
+        lastName.sendKeys("Ali");
+
+        WebElement postCode = driver.findElement(By.id("postal-code"));
+        postCode.sendKeys("2052");
+
+        //Locate Continue button
+        WebElement continueButton = driver.findElement(By.id("continue"));
+        continueButton.click();
+
+        Thread.sleep(2000);
+
+        //Locate Finish button
+        WebElement finishButton = driver.findElement(By.id("finish"));
+        finishButton.click();
+
+        //Locate Menu Icon of left
+        driver.findElement(By.id("react-burger-menu-btn")).click();
+
+        //Locate LogOut button
+        WebElement logOutButton = driver.findElement(By.id("logout_sidebar_link"));
+        logOutButton.click();
         Thread.sleep(5000);
-        Assert.assertEquals(driver.getCurrentUrl(),"https://www.saucedemo.com/inventory.html");
-        System.out.println(driver.getTitle());
     }
+
 }
