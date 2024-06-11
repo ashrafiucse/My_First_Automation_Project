@@ -1,5 +1,6 @@
 package saucedemo.com;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -8,6 +9,8 @@ import org.testng.annotations.Test;
 public class LogIn extends DriverSetup {
     @Test
     public void testLogIn() throws InterruptedException {
+        //Java faker object creating
+        Faker faker = new Faker();
         driver.get("https://www.saucedemo.com/");
         WebElement userNameBox = driver.findElement(By.id("user-name"));
         userNameBox.sendKeys("standard_user");
@@ -35,13 +38,15 @@ public class LogIn extends DriverSetup {
 
         //Locate Delivery Address Text
         WebElement firstName = driver.findElement(By.id("first-name"));
-        firstName.sendKeys("Ashraf");
+        firstName.sendKeys(faker.name().firstName());
 
         WebElement lastName = driver.findElement(By.id("last-name"));
-        lastName.sendKeys("Ali");
+        lastName.sendKeys(faker.name().lastName());
 
         WebElement postCode = driver.findElement(By.id("postal-code"));
-        postCode.sendKeys("2052");
+        postCode.sendKeys(faker.name().name());
+
+        Thread.sleep(5000);
 
         //Locate Continue button
         WebElement continueButton = driver.findElement(By.id("continue"));
@@ -50,6 +55,7 @@ public class LogIn extends DriverSetup {
         Thread.sleep(2000);
 
         //Locate Finish button
+
         WebElement finishButton = driver.findElement(By.id("finish"));
         finishButton.click();
 
@@ -59,7 +65,7 @@ public class LogIn extends DriverSetup {
         //Locate LogOut button
         WebElement logOutButton = driver.findElement(By.id("logout_sidebar_link"));
         logOutButton.click();
-        Thread.sleep(5000);
+        Thread.sleep(1000);
     }
 
 }

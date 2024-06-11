@@ -64,7 +64,7 @@ public class HomepageLocatorPractice extends DriverSetup {
 //        sliderButton.click();
 
         //Locate Slider Image
-        //WebElement sliderImage = driver.findElement(By.xpath("//a[@href='//pages.daraz.com.bd/wow/gcp/daraz/megascenario/bd/bd-6-6-eid-ul-adha-2024-campaign/hot-deals-all?spm=a2a0e.home.top.dbr3.49c312f7EgNDIt&pfilter=1010Badge_1177897&scm=1003.4.icms-zebra-100031732-2885620.OTHER_6502997622_7768800']"));
+        //WebElement sliderImage = driver.findElement(By.xpath("//section[@class='J_BannerSlider']//div[2]//div[1]//a[1]"));
         //sliderImage.click();
         //System.out.println(sliderImage.getTagName());
 
