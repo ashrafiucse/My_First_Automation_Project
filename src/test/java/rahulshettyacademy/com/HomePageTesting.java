@@ -49,7 +49,7 @@ public class HomePageTesting extends DriverSetup {
         for (int i = 0; i < windowHandlers.size(); i++) {
             System.out.println(windowHandlers.get(i));
         }
-        driver.switchTo().
+        //driver.switchTo().
         Thread.sleep(3000);
     }
 }
