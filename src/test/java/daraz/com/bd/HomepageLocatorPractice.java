@@ -97,7 +97,7 @@ public class HomepageLocatorPractice extends DriverSetup {
         //-----------------Just For You----------------
 
         //Locate Load More Button
-        //WebElement loadMoreButton = driver.findElement(By.linkText("Load More"));
+        //WebElement loadMoreButton = driver.findElement(By.xpath("//a[normalize-space()='Load More']"));
         //loadMoreButton.click();
         //System.out.println(loadMoreButton.getTagName());
         //Not Showing Text

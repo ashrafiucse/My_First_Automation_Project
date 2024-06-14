@@ -17,6 +17,6 @@ public class DriverSetup {
     // for last case to execute -> aftersuite
     @AfterSuite
     public void quitDriver() {
-        driver.close();
+        driver.quit();
     }
 }
