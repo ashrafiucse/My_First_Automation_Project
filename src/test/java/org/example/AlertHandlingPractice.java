@@ -9,28 +9,58 @@ public class AlertHandlingPractice extends DriverSetup{
     @Test
     public void testAlertHandling() throws InterruptedException {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
-
-        //Locate First Alert Button
-        //driver.findElement(By.xpath("//button[normalize-space()='Click for JS Alert']")).click();
-
-        //Locate Second Alert Button
-        //driver.findElement(By.xpath("//button[@onclick='jsConfirm()']")).click();
-
-        //Locate Third Alert Button
-        driver.findElement(By.xpath("//button[@onclick='jsPrompt()']")).click();
-
-        //Retrieving Alert message compare with actual message
+        driver.findElement(By.xpath("//button[normalize-space()='Click for JS Alert']")).click();
         Alert alert = driver.switchTo().alert();
-        String alertText = alert.getText();
-        //String alertText = driver.switchTo().alert().getText();
-        Assert.assertEquals(alertText,"I am a JS prompt");
-        Thread.sleep(3000);
-        //alert.dismiss();
-        alert.sendKeys("Hey! Who are you?");
+        String message = alert.getText();
+        Assert.assertEquals(message,"I am a JS Alert");
+        Thread.sleep(1000);
         alert.accept();
-
+        Thread.sleep(1000);
         String result = driver.findElement(By.xpath("//p[@id='result']")).getText();
-        Assert.assertEquals(result,"You entered: Hey! Who are you?");
+        Assert.assertEquals(result,"You successfully clicked an alert");
+
+        driver.findElement(By.xpath("//button[normalize-space()='Click for JS Confirm']")).click();
+        alert = driver.switchTo().alert();
+        message = alert.getText();
+        Thread.sleep(1000);
+        Assert.assertEquals(message,"I am a JS Confirm");
+        alert.accept();
+        Thread.sleep(1000);
+        result = driver.findElement(By.xpath("//p[@id='result']")).getText();
+        Assert.assertEquals(result,"You clicked: Ok");
+
+        driver.findElement(By.xpath("//button[normalize-space()='Click for JS Confirm']")).click();
+        alert = driver.switchTo().alert();
+        message = alert.getText();
+        Thread.sleep(1000);
+        Assert.assertEquals(message,"I am a JS Confirm");
+        alert.dismiss();
+        Thread.sleep(1000);
+        result = driver.findElement(By.xpath("//p[@id='result']")).getText();
+        Assert.assertEquals(result,"You clicked: Cancel");
+
+        driver.findElement(By.xpath("//button[normalize-space()='Click for JS Prompt']")).click();
+        alert = driver.switchTo().alert();
+        message = alert.getText();
+        Thread.sleep(1000);
+        Assert.assertEquals(message,"I am a JS prompt");
+        alert.dismiss();
+        Thread.sleep(1000);
+        result = driver.findElement(By.xpath("//p[@id='result']")).getText();
+        Assert.assertEquals(result,"You entered: null");
+
+        driver.findElement(By.xpath("//button[normalize-space()='Click for JS Prompt']")).click();
+        alert = driver.switchTo().alert();
+        message = alert.getText();
+        Thread.sleep(1000);
+        Assert.assertEquals(message,"I am a JS prompt");
+        alert.sendKeys("Hey Bro! What's up?");
+        alert.accept();
+        Thread.sleep(1000);
+        result = driver.findElement(By.xpath("//p[@id='result']")).getText();
+        Assert.assertEquals(result,"You entered: Hey Bro! What's up?");
         Thread.sleep(3000);
+
+
     }
 }
