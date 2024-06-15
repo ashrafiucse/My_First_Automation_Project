@@ -3,6 +3,7 @@ package daraz.com.bd;
 import org.example.DriverSetup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class HomepageLocatorPractice extends DriverSetup {
@@ -57,7 +58,14 @@ public class HomepageLocatorPractice extends DriverSetup {
 
         //Locate List Hover sub menu Left side
         WebElement leftSideBarSubMenu = driver.findElement(By.id("Level_1_Category_No1"));
-        //System.out.println(leftSideBarSubMenu.getText());
+//        Actions actions = new Actions(driver);
+//        actions.clickAndHold(leftSideBarSubMenu).build().perform();
+//        WebElement traditionalWear = driver.findElement(By.xpath("(//span[contains(text(),'Traditional Wear')])[1]"));
+//        actions.clickAndHold(traditionalWear).build().perform();
+//        WebElement shalwarKamiz = driver.findElement(By.xpath("//img[@alt='Shalwar Kameez']"));
+//        shalwarKamiz.click();
+//        System.out.println(traditionalWear.getText());
+//        System.out.println(leftSideBarSubMenu.getText());
 
         //Locate Slider Button
 //        WebElement sliderButton = driver.findElement(By.className("slide-forward-arrow"));

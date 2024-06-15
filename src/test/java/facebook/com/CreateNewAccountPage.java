@@ -3,6 +3,7 @@ package facebook.com;
 import org.example.DriverSetup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class CreateNewAccountPage extends DriverSetup {
@@ -29,6 +30,27 @@ public class CreateNewAccountPage extends DriverSetup {
         //Locate Password Field
         WebElement passwordField = driver.findElement(By.name("reg_passwd__"));
         passwordField.sendKeys("abc123");
+
+        //Locate Date of BirthDay
+        WebElement dateBirthDay = driver.findElement(By.id("day"));
+        dateBirthDay.click();
+        Thread.sleep(1000);
+        Select selectDay = new Select(dateBirthDay);
+        selectDay.selectByIndex(4);
+
+        //Locate Month of Birthday
+        WebElement monthBirthDay = driver.findElement(By.id("month"));
+        monthBirthDay.click();
+        Thread.sleep(1000);
+        Select selectMonth = new Select(monthBirthDay);
+        selectMonth.selectByValue("11");
+
+        //Locate Year of Birthday
+        WebElement yearBirthDay = driver.findElement(By.id("year"));
+        yearBirthDay.click();
+        Thread.sleep(1000);
+        Select selectYear = new Select(yearBirthDay);
+        selectYear.selectByVisibleText("1997");
 
         //Locate Age Field
         //WebElement ageField = driver.findElement(By.name("birthday_age"));
@@ -58,7 +80,7 @@ public class CreateNewAccountPage extends DriverSetup {
         //------Sign Up Button-------------
         //Locate Sign up Button
         WebElement signUpButton = driver.findElement(By.name("websubmit"));
-        //signUpButton.click();
+        signUpButton.click();
 
         //Locate Already have an account? Link
         WebElement alreadyHaveAnAccLink = driver.findElement(By.linkText("Already have an account?"));
